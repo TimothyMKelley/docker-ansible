@@ -10,6 +10,9 @@ RUN apt-get update -qy && \
     apt-add-repository -y ppa:ansible/ansible && \
     apt-get update -qy && \
     apt-get install -qy ansible
+
+# Copy baked in playbooks
+COPY ansible /ansible
     
 # Add volume for ansible playbooks
 VOLUME /ansible
